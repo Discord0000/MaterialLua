@@ -1132,6 +1132,11 @@ function Material.Load(Config)
 				ButtonLabel.Text = Value
 			end
 
+      function ButtonLibrary:Remove()
+        ButtonLabel:Destroy()
+        return NewButton:Destroy()
+      end
+
 			function ButtonLibrary:GetText()
 				return ButtonLabel.Text
 			end
@@ -1289,6 +1294,10 @@ function Material.Load(Config)
 			function DropdownLibrary:GetOptions()
 				return DropdownOptions
 			end
+
+      function DropdownLibrary:Remove()
+        return Dropdown:Destroy()
+      end
 
 			return DropdownLibrary
 		end
@@ -1517,6 +1526,10 @@ function Material.Load(Config)
 				function ChipSetLibrary:GetOptions()
 					return ChipSetOptions
 				end
+
+        function ChipSetLibrary:Remove()
+          return ChipSet:Destroy()
+        end
 
 				return ChipSetLibrary
 			end
@@ -1764,6 +1777,10 @@ function Material.Load(Config)
 				function DataTableLibrary:GetOptions()
 					return DataTableOptions
 				end
+
+        function DataTableLibrary:Remove()
+          return DataItem:Destroy()
+        end
 
 				return DataTableLibrary
 			end
@@ -2059,6 +2076,10 @@ function Material.Load(Config)
 				return ColorTracker.ImageColor3
 			end
 
+      function ColorPickerLibrary:Remove() 
+        return ColorPicker:Destroy()
+      end
+
 			return ColorPickerLibrary
 		end
 
@@ -2156,6 +2177,10 @@ function Material.Load(Config)
 				return ToggleDefault
 			end
 
+      function ToggleLibrary:Remove()
+        return Toggle:Destroy()
+      end
+
 			return ToggleLibrary
 		end
 
@@ -2234,6 +2259,10 @@ function Material.Load(Config)
 				return TextInput.Text
 			end
 
+      function TextFieldLibrary:Remove()
+        return TextField:Destroy()
+      end
+
 			return TextFieldLibrary
 		end
 		
@@ -2260,6 +2289,10 @@ function Material.Load(Config)
 			function LabelOptions.SetText(Text)
 				LabelContent.Text = Text
 			end
+
+      function LabelOptions:Remove()
+        return LabelContainer:Destroy()
+      end
 			
 			return LabelOptions
 		end
@@ -2421,6 +2454,11 @@ function Material.Load(Config)
 			function SliderLibrary:GetMax()
 				return SliderMax
 			end
+
+      function SliderLibrary:Remove()
+        return Slider:Destroy()
+      end
+
 
 			return SliderLibrary
 		end
